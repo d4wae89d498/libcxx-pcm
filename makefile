@@ -10,7 +10,7 @@ OBJS := $(BUILD_DIR)/__is_posix_terminal.o $(BUILD_DIR)/std.o $(BUILD_DIR)/std.c
 PCMS := $(OBJS:%.o=%.pcm)
 NAME := $(BUILD_DIR)/$(NAME)
 
-all:  $(NAME) test clean
+all:  $(NAME) test
 
 $(BUILD_DIR)/std.pcm: $(SRC_DIR)/std.cppm
 	$(CXX) $(CXXFLAGS) --precompile $< -o $@
